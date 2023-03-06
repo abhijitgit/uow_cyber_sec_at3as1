@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>7701032 - Abhijit Moholkar</title>
+
+    <script>
+      //Task 4: your javascript code for task 4 should be below the comment
+      function catClicked() {
+        showAnimal("Cat");
+      }
+
+      function dogClicked() {
+        showAnimal("Dog");
+      }
+
+      function frogClicked() {
+        showAnimal("Frog");
+      }
+
+      function showAnimal(animal) {
+        let text = "User clicks " + animal;
+        let message = animal + " is clicked";
+        let imgSrc = animal + ".jpeg";
+
+        document.getElementById("ipAnimal").setAttribute("value", text);
+        document.getElementById("spAnimal").innerHTML = message;
+        document.getElementById("imgAnimal").src = imgSrc;
+        document.getElementById("imgAnimal").style.visibility = "visible";
+      }
+    </script>
+
+    <style>
+      .pageHeader {
+        font-size: 60px;
+        font-style: oblique;
+        color: mediumseagreen;
+        text-align: center;
+      }
+      .taskLabel {
+        font-size: 30px;
+        font-weight: bold;
+        font-style: oblique;
+        color: mediumslateblue;
+      }
+
+      .task1Div {
+        width: 60%;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        text-align: center;
+        background-color: lightblue;
+        color: blue;
+      }
+
+      .heading1 {
+        font-size: 40px;
+        font-weight: bolder;
+      }
+
+      .heading2 {
+        font-size: 35px;
+        font-weight: bolder;
+      }
+
+      .heading3 {
+        font-size: 30px;
+        font-weight: bolder;
+      }
+
+      /* stylesheet for task 2 */
+      .activity_tbl {
+        display: block;
+        table-layout: fixed;
+        border: 1px;
+        font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+        font-size: 18px;
+        color: maroon;
+        border-style: double;
+        border-radius: 5px;
+        width: 80%;
+      }
+      table.activity_tbl th:first-child {
+        width: 75%;
+      }
+
+      .activity_tbl {
+        margin-bottom: 2rem;
+      }
+
+      .activity_tbl thead tr th {
+        background: maroon;
+        color: white;
+        text-align: left;
+        margin-bottom: 1rem;
+        padding-left: 2rem;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+      }
+
+      .activity_tbl tbody tr:nth-child(even) {
+        background-color: whitesmoke;
+      }
+
+      .activity_tbl tbody tr:nth-child(odd) {
+        background-color: honeydew;
+      }
+
+      .activity_tbl tbody tr td {
+        padding-left: 2rem;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+      }
+      /* stylesheet for task 3 */
+      #vegetable {
+        width: 80%;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-size: 15px;
+        border: 5px;
+        border-style: ridge;
+        border-spacing: 15px;
+      }
+
+      #vegetable tr th {
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-size: 26px;
+      }
+
+      #vegetable tr td {
+        padding: 2rem;
+        border: 2px dashed;
+      }
+
+      #vegetable .firstCol {
+        width: 30%;
+        padding-left: 1rem;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+      }
+
+      #vegetable .firstCol img {
+        width: 200px;
+        height: 200px;
+        padding-left: 1rem;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+      }
+      /* stylesheet for task 4*/
+      #imgAnimal {
+        visibility: hidden;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="pageHeader">7701032 Abhijit Moholkar</div>
+
+    <div class="taskLabel">
+      Task 1 - Use CSS to display following information
+    </div>
+    <div class="task1Div">
+      <h1 class="heading1">7701032 Abhijit Moholkar</h1>
+      <h2 class="heading2">COMP804: Web Security</h2>
+      <h3 class="heading3">Assignment 1, due at the end of week 5</h3>
+    </div>
+    <hr />
+    <div class="taskLabel">Task 2 - Use CSS to style a table</div>
+    <table class="activity_tbl">
+      <thead>
+        <tr>
+          <th>Activity</th>
+          <th>Date</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>First day to enrol for re-enrolling (continuing students)</td>
+          <td>21 Nov 2022</td>
+        </tr>
+        <tr>
+          <td>Orientation</td>
+          <td>
+            <p>18 Jul 2023</p>
+            <p>
+              Visit
+              <a href="/student/get-started/orientation/">Orientation page</a>
+              for more details.
+            </p>
+          </td>
+        </tr>
+        <tr>
+          <td>Lectures Commence (weeks 1-9)</td>
+          <td>24 Jul - 22 Sep 2023</td>
+        </tr>
+        <tr>
+          <td>Last day to enrol / add subjects yourself</td>
+          <td>04 Aug 2023</td>
+        </tr>
+        <tr>
+          <td>
+            Last day to enrol / add subjects with Head of Students approval
+          </td>
+          <td>11 Aug 2023</td>
+        </tr>
+      </tbody>
+    </table>
+    <hr />
+    <div class="taskLabel">Task 3 - HTML & CSS</div>
+    <table id="vegetable">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Health Benefit</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="firstCol">
+            <p>Spinach</p>
+            <p><img src="spinach.jpg" alt="Image of spinach bunch" /></p>
+          </td>
+          <td>
+            <p>
+              If Popeye the Sailor Man could get his strength from spinach, you
+              could too because this leafy vegetable is considered a superfood.
+              The reason why spinach is considered a superfood is because of the
+              loads of nutrients and low-calorie that it possesses. This leafy
+              veggie also benefits your skin, hair and bones.
+            </p>
+            <p>
+              <a
+                href="https://pharmeasy.in/blog/15-reasons-why-spinach-is-called-a-superfood/"
+                >15 Reasons Why Spinach Is Called A Superfood</a
+              >
+            </p>
+          </td>
+        </tr>
+        <tr>
+          <td class="firstCol">
+            <p>Carrots</p>
+            <p><img src="carrots.jpeg" alt="Image of Carrots" /></p>
+          </td>
+          <td>
+            <p>
+              Carrots tend to be synonymous with eye health, but there are
+              several other equally amazing health benefits of this humble root
+              vegetable.
+            </p>
+            <p>
+              <a
+                href="https://www.eatingwell.com/article/2060606/health-benefits-of-carrots/"
+                >6 Amazing Health Benefits of Carrots</a
+              >
+            </p>
+          </td>
+        </tr>
+        <tr>
+          <td class="firstCol">
+            <p>Capsicum</p>
+            <p><img src="capsicum.jpeg" alt="Image of Capsicum" /></p>
+          </td>
+          <td>
+            <p>
+              Bell peppers (Capsicum annuum) are fruits that belong to the
+              nightshade family. They are low in calories and rich in vitamin C
+              and other antioxidants, making them an excellent addition to a
+              healthy diet.
+            </p>
+            <p>
+              <a href="https://www.healthline.com/nutrition/foods/bell-peppers"
+                >Bell Peppers 101: Nutrition Facts and Health Benefits</a
+              >
+            </p>
+          </td>
+        </tr>
+        <tr>
+          <td class="firstCol">
+            <p>Broccoli</p>
+            <p><img src="broccoli.jpeg" alt="Image of Broccoli" /></p>
+          </td>
+          <td>
+            <p>
+              A study by Nutrition Research found that consuming steamed
+              broccoli regularly lowers the risk of cardiovascular disease by
+              reducing the total amount of cholesterol in the body. Another
+              study in the US also found that increasing vegetables in the diet,
+              especially brassica vegetables like broccoli, may reduce the risk
+              of heart disease.
+            </p>
+            <p>
+              <a
+                href="https://pharmeasy.in/blog/15-reasons-why-spinach-is-called-a-superfood/"
+                >Bowl of raw broccoli florets Top 5 health benefits of
+                broccoli</a
+              >
+            </p>
+          </td>
+        </tr>
+        <tr>
+          <td class="firstCol">
+            <p>Eggplant</p>
+            <p><img src="eggplant.jpeg" alt="Image of Eggplant" /></p>
+          </td>
+          <td>
+            <p>
+              The eggplant has been an ingredient in traditional medicine for
+              thousands of years. In the ancient Indian system of ayurvedic
+              medicine, practitioners used white eggplant to treat diabetes and
+              the roots to relieve asthma.
+            </p>
+            <p>
+              <a
+                href="https://www.webmd.com/food-recipes/eggplant-health-benefits"
+                >Health Benefits of Eggplant - WebMD</a
+              >
+            </p>
+          </td>
+        </tr>
+        <tr>
+          <td class="firstCol">
+            <p>Moringa</p>
+            <p><img src="moringa.jpeg" alt="Image of Moringa" /></p>
+          </td>
+          <td>
+            <p>
+              Moringa has many important vitamins and minerals. The leaves have
+              7 times more vitamin C than oranges and 15 times more potassium
+              than bananas. It also has calcium, protein, iron, and amino acids,
+              which help your body heal and build muscle.
+            </p>
+            <p>
+              <a
+                href="https://www.webmd.com/vitamins-and-supplements/health-benefits-moringa"
+                >Health Benefits of Moringa
+              </a>
+            </p>
+          </td>
+        </tr>
+        <tr>
+          <td class="firstCol">
+            <p>Sweet Potato</p>
+            <p><img src="sweet potato.jpeg" alt="Image of Sweet Potato" /></p>
+          </td>
+          <td>
+            <p>
+              Sweet potatoes might be one of nature’s greatest gifts. Not only
+              are they packed with essential nutrients, but they’re also
+              incredibly versatile, delicious, and easy to cook.
+            </p>
+            <p>
+              <a
+                href="https://www.themanual.com/fitness/benefits-of-sweet-potatoes/"
+                >10 reasons you need to eat more sweet potatoes
+              </a>
+            </p>
+          </td>
+        </tr>
+        <tr>
+          <td class="firstCol">
+            <p>Raw Banana</p>
+            <p><img src="raw banana.jpeg" alt="Image of Raw Banana" /></p>
+          </td>
+          <td>
+            <p>
+              Raw bananas are rich in potassium, which works as a vasodilator
+              and controls blood pressure levels. It also prevents many heart
+              conditions, such as atherosclerosis and heart attack, and improves
+              heart health. Green bananas have a low glycemic index and slowly
+              release the insulin hormone after consumption.
+            </p>
+            <p>
+              <a
+                href="https://www.narayanahealth.org/blog/health-benefits-of-green-or-raw-banana/"
+                >15 Reasons Why Spinach Is Called A Superfood</a
+              >
+            </p>
+          </td>
+        </tr>
+        <tr>
+          <td class="firstCol">
+            <p>Cabbage</p>
+            <p><img src="cabbage.jpeg" alt="Image of Cabbage" /></p>
+          </td>
+          <td>
+            <p>
+              Cabbage may not be the most attractive vegetable, but it’s full of
+              nutritional goodness that can keep you feeling strong and healthy.
+              From boosting your immune system to improving your digestion
+              (sometimes with embarrassing results), cabbage and its health
+              benefits deserve a place at your table.
+            </p>
+            <p>
+              <a href="https://health.clevelandclinic.org/benefits-of-cabbage/"
+                >8 Health Benefits of Cabbage</a
+              >
+            </p>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <hr />
+    <div class="taskLabel">Task 4 - Javascript with button</div>
+    <div>
+      <button id="btnCat" onclick="catClicked()">Cat</button>
+      <button id="btnDog" onclick="dogClicked()">Dog</button>
+      <button id="btnFrog" onclick="frogClicked()">Frog</button>
+      <p><input type="text" id="ipAnimal" /></p>
+      <span id="spAnimal"></span>
+      <p>
+        <img id="imgAnimal" width="250px" height="250px" />
+      </p>
+    </div>
+  </body>
+</html>
